@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+.container {
+  margin: auto;
+  padding: 0 20;
+  max-width: 1400px;
+}
+
+/* =========================================
+   🌞 Light Mode Colors
+========================================= */
+.text-primary {
+  color: #16a34a; /* green-600 */
+}
+.bg-primary {
+  background-color: #16a34a; /* green-600 */
+}
+.bg-surface {
+  background-color: #ffffff; /* white */
+}
+.text-surface {
+  color: #111827; /* gray-900 */
+}
+.nav-link {
+  color: #374151; /* gray-700 */
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: #16a34a; /* green-600 */
+}
+.text-light {
+  color: white;
+}
+.bg-light {
+  background-color: white;
+}
+.text-dark {
+  color: black;
+}
+.bg-dark {
+  color: black;
+}
+
+/* =========================================
+   🌙 Dark Mode Colors
+========================================= */
+.dark .text-primary {
+  color: #4ade80; /* green-400 */
+}
+.dark .bg-primary {
+  background-color: #15803d; /* green-700 */
+}
+.dark .bg-surface {
+  background-color: #0f172a; /* slate-950 */
+}
+.dark .text-surface {
+  color: #e5e7eb; /* gray-200 */
+}
+.dark .nav-link {
+  color: #d1d5db; /* gray-300 */
+}
+.dark .nav-link:hover {
+  color: #4ade80; /* green-400 */
+}
+
+/* =========================================
+   🎨 Buttons
+========================================= */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-primary {
+  background-color: #16a34a; /* green-600 */
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #15803d; /* green-700 */
+}
+.btn-outline {
+  border: 2px solid #16a34a;
+  color: #16a34a;
+  background-color: transparent;
+}
+.btn-outline:hover {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+/* =========================================
+   🖌️ Extra Utilities (Future Use)
+========================================= */
+.text-secondary {
+  color: #2563eb; /* blue-600 */
+}
+.bg-secondary {
+  background-color: #2563eb;
+}
+.dark .text-secondary {
+  color: #60a5fa; /* blue-400 */
+}
+.dark .bg-secondary {
+  background-color: #1e40af; /* blue-700 */
+}
+
+.text-accent {
+  color: #d97706; /* amber-600 */
+}
+.bg-accent {
+  background-color: #d97706;
+}
+.dark .text-accent {
+  color: #fbbf24; /* amber-400 */
+}
+.dark .bg-accent {
+  background-color: #b45309; /* amber-700 */
+}
