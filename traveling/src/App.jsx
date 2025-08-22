@@ -3,6 +3,7 @@ import DestinationDetails from "./Destinations Content/DestinationDetails";
 import MainDestinationComp from "./Destinations Content/MainDestinationComp";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import Footer from "./components/Footers";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/" element={<MainDestinationComp />} />
         <Route path="/destination/:id" element={<DestinationDetails />} />
       </Routes>
+      {/* ✅ Footer goes here */}
+      <Footer />
     </Router>
   );
 }
