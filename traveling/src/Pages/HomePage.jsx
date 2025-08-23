@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import MainDestinationComp from "../Destinations Content/MainDestinationComp";
 import Footer from "../components/Footers";
+import MainTrainsPage from "../Trains Details/MainTrainsPage";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
         <Navbar />
         <Hero />
         <MainDestinationComp />
+        <MainTrainsPage />
         <Footer />
       </div>
     </>
