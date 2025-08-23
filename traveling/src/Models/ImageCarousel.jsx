@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import img1 from "../assets/images/park.jpg";
 import img2 from "../assets/images/river.jpg";
-import img3 from "../assets/images/landscape.jpg";
+import img3 from "../assets/images/sea_view.jpg";
 
 const images = [
   { src: img1, alt: "Park" },
@@ -27,7 +27,7 @@ const ImageCarousel = () => {
           <img
             src={img.src}
             alt={img.alt}
-            className="w-full h-full object-cover cursor-pointer"
+            className="w-full h-full object-cover cursor-pointer bg-amber-600"
           />
         </SwiperSlide>
       ))}
