@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DestinationDetails from "./Destinations Content/DestinationDetails";
-import MainDestinationComp from "./Destinations Content/MainDestinationComp";
 import Navbar from "./components/Navbar";
 import "./App.css";
-import Footer from "./components/Footers";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
@@ -13,11 +12,9 @@ function App() {
 
       {/* ✅ Only Route components inside Routes */}
       <Routes>
-        <Route path="/" element={<MainDestinationComp />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/destination/:id" element={<DestinationDetails />} />
       </Routes>
-      {/* ✅ Footer goes here */}
-      <Footer />
     </Router>
   );
 }
