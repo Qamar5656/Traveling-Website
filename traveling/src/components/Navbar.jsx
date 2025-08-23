@@ -6,18 +6,18 @@ import Button from "../Models/Button";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Services", "Contact"];
+  const navItems = ["Home", "About", "Services", "Contact", "Blog"];
 
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-colors duration-300 bg-surface shadow`}
     >
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+      <div className="container mx-auto flex justify-between items-center p-6">
         {/* Logo */}
         <h1 className="text-2xl font-bold text-primary">Pak Railfan</h1>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-8 text-lg">
+        <ul className="hidden md:flex space-x-12 text-lg">
           {navItems.map((item) => (
             <li key={item}>
               <a href={`#${item.toLowerCase()}`} className="nav-link font-bold">
@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-2xl text-surface"
+          className="md:hidden text-2xl text-surface cursor-pointer"
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
