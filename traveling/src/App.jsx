@@ -7,10 +7,8 @@ import HomePage from "./Pages/HomePage";
 function App() {
   return (
     <Router>
-      {/* ✅ Navbar goes here */}
       <Navbar />
 
-      {/* ✅ Only Route components inside Routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/destination/:id" element={<DestinationDetails />} />
