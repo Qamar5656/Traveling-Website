@@ -3,7 +3,7 @@ import img2 from "../assets/images/waterfall.jpg";
 import img3 from "../assets/images/glacier.jpg";
 import img4 from "../assets/images/river.jpg";
 import img5 from "../assets/images/landscape.jpg";
-import img6 from "../assets/images/green_river.jpg";
+import img6 from "../assets/images/sea_view.jpg";
 import DestinationCard from "../Models/DestinationCard";
 
 const destinations = [
