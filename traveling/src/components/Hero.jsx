@@ -1,22 +1,17 @@
 import Button from "../Models/Button";
+import ImageCarousel from "../Models/ImageCarousel";
+
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center text-center">
-      {/* Background Video */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/videos/jeep_from_car.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      />
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+    <section className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
+      {/* Image Carousel as background */}
+      <ImageCarousel />
 
-      {/* Content */}
-      <div className="relative z-10 px-6">
+      {/* Overlay */}
+      <div className="absolute top-0 w-full h-full  bg-black/30 z-10"></div>
+
+      {/* Text Content */}
+      <div className="absolute z-20 px-6 max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-light">
           Explore Pakistan with{" "}
           <span className="text-primary">Pak Railfan</span>
