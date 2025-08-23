@@ -1,4 +1,3 @@
-import video from "../assets/images/sea_view_video.mp4";
 import Button from "../Models/Button";
 const Hero = () => {
   return (
@@ -6,11 +5,12 @@ const Hero = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src={video}
+        src="/videos/sea_video2.mp4"
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
       />
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
