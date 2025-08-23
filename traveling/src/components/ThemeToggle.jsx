@@ -29,7 +29,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full hover:bg-surface transition"
+      className="p-2 rounded-full hover:bg-surface transition cursor-pointer"
       aria-label="Toggle Theme"
     >
       {darkMode ? (
