@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -31,7 +30,7 @@ const Footer = () => {
                 href="/destinations"
                 className="hover:text-secondary transition"
               >
-                Destinations
+                About
               </a>
             </li>
             <li>
@@ -77,7 +76,7 @@ const Footer = () => {
         {/* Contact & Social */}
         <div>
           <h3 className="text-secondary font-bold mb-3">Contact Us</h3>
-          <p className="text-dark text-sm mb-2">Email: info@pakrailfan.com</p>
+          <p className="text-dark text-sm mb-2">Email: info@email.com</p>
           <p className="text-dark text-sm mb-4">Phone: +92 123 456 789</p>
 
           <div className="flex space-x-4">
