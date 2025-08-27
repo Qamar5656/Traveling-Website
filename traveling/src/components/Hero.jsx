@@ -19,6 +19,7 @@ const Hero = () => {
         <p className="text-lg md:text-2xl max-w-2xl mx-auto mb-6 text-light">
           Uncover the beauty of railway journeys and scenic adventures.
         </p>
+        {/* get started button */}
         <Button text="Get Started" />
       </div>
     </section>
