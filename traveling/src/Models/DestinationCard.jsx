@@ -12,14 +12,19 @@ const DestinationCard = ({
   duration,
   transport,
   bestTime,
+  onClick,
 }) => {
   return (
-    <div className="bg-surface rounded-xl shadow-md hover:shadow-xl transition overflow-hidden cursor-pointer">
+    <div
+      className="bg-surface rounded-xl shadow-md hover:shadow-xl transition overflow-hidden cursor-pointer"
+      onClick={onClick}
+    >
       {/* Image with hover */}
       <div className="overflow-hidden rounded-t-xl">
         <img
           src={img}
           alt={locationName}
+          loading="lazy"
           className="w-full h-56 object-cover transform transition-transform duration-500 hover:scale-110"
         />
       </div>

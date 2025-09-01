@@ -5,6 +5,7 @@ import img4 from "../assets/images/geu_40.jpg";
 import img5 from "../assets/images/new_coach.jpg";
 import img6 from "../assets/images/ac_standard.jpg";
 import DestinationCard from "../Models/DestinationCard";
+import { useNavigate } from "react-router-dom";
 
 const MainTrainsPage = () => {
   const destinations = [
@@ -57,7 +58,7 @@ const MainTrainsPage = () => {
       buttonText: "More Details",
       rating: "4.8",
       duration: "19 hours 40 minutes",
-      transport: "k",
+      transport: "",
       bestTime: "Lahore - Karachi",
     },
     {
@@ -87,6 +88,11 @@ const MainTrainsPage = () => {
       bestTime: "Lahore - Karachi",
     },
   ];
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/destination");
+  };
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -98,7 +104,7 @@ const MainTrainsPage = () => {
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {destinations.map((dest, index) => (
-            <DestinationCard key={index} {...dest} />
+            <DestinationCard key={index} {...dest} onClick={handleClick} />
           ))}
         </div>
       </div>{" "}
