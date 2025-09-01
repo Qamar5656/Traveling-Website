@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
 import Button from "../Models/Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center p-6">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-primary">Pak Railfan</h1>
+        <Link className="text-2xl font-bold text-primary cursor-pointer" to="/">
+          Pak Railfan
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-12 text-lg">
