@@ -5,6 +5,7 @@ import img4 from "../assets/images/river.jpg";
 import img5 from "../assets/images/landscape.jpg";
 import img6 from "../assets/images/sea_view.jpg";
 import DestinationCard from "../Models/DestinationCard";
+import { useNavigate } from "react-router-dom";
 
 const destinations = [
   {
@@ -88,6 +89,10 @@ const destinations = [
 ];
 
 const MainDestinationComp = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/destination");
+  };
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Section Heading */}
@@ -98,7 +103,7 @@ const MainDestinationComp = () => {
       {/* Cards Grid */}
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {destinations.map((dest, index) => (
-          <DestinationCard key={index} {...dest} />
+          <DestinationCard key={index} {...dest} onClick={handleClick} />
         ))}
       </div>
     </div>
