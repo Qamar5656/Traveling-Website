@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Keyboard } from "swiper/modules";
 import img1 from "../assets/images/park.jpg";
 import img2 from "../assets/images/river.jpg";
 import img3 from "../assets/images/sea_view.jpg";
@@ -16,11 +16,12 @@ const images = [
 const ImageCarousel = () => {
   return (
     <Swiper
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation, Autoplay, Keyboard]}
       navigation
+      keyboard={{ enabled: true }}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       loop
-      className="relative top-0 left-0 w-full h-full z-0"
+      className="relative top-0 left-0 w-full h-full z-0 cursor-pointer"
     >
       {images.map((img, idx) => (
         <SwiperSlide key={idx}>
