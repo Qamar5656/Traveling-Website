@@ -20,7 +20,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-12 text-lg">
+        {/* <ul className="hidden md:flex space-x-12 text-md md:text-md  lg:text-lg"> */}
+        <ul className="hidden md:flex space-x-8 lg:space-x-12 text-md md:text-md  lg:text-lg">
           {navItems.map((item) => (
             <li key={item}>
               <a href={`#${item.toLowerCase()}`} className="nav-link font-bold">
