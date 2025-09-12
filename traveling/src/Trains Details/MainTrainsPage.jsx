@@ -90,8 +90,8 @@ const MainTrainsPage = () => {
   ];
 
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/destination");
+  const handleClick = (destination) => {
+    navigate("/destination", { state: { destination } });
   };
   return (
     <>
@@ -104,7 +104,11 @@ const MainTrainsPage = () => {
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {destinations.map((dest, index) => (
-            <DestinationCard key={index} {...dest} onClick={handleClick} />
+            <DestinationCard
+              key={index}
+              {...dest}
+              onClick={() => handleClick(dest)}
+            />
           ))}
         </div>
       </div>{" "}
