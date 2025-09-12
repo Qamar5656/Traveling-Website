@@ -15,6 +15,15 @@ const destinations = [
     price: "120$",
     description:
       "Azad Jammu and Kashmir (AJK) is a region administered by Pakistan, known for its breathtaking valleys, snow-capped peaks, and vibrant culture. It’s one of the most scenic spots in South Asia.",
+    fullDescription: `
+    Azad Jammu and Kashmir (AJK) is a region administered by Pakistan, 
+    known for its breathtaking valleys, snow-capped peaks, and vibrant culture. 
+    It’s one of the most scenic spots in South Asia.
+
+    You can visit Neelum Valley, Leepa Valley, and the serene Rawalakot. 
+    Locals are welcoming, and traditional cuisine adds to the experience.
+    Hiking, camping, and sightseeing are among the top activities here.
+  `,
     buttonText: "More Details",
     rating: "4.9",
     duration: "6 Days / 5 Nights",
@@ -90,8 +99,8 @@ const destinations = [
 
 const MainDestinationComp = () => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/destination");
+  const handleClick = (destination) => {
+    navigate("/destination", { state: { destination } });
   };
   return (
     <div className="container mx-auto px-4 py-8">
@@ -103,7 +112,11 @@ const MainDestinationComp = () => {
       {/* Cards Grid */}
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {destinations.map((dest, index) => (
-          <DestinationCard key={index} {...dest} onClick={handleClick} />
+          <DestinationCard
+            key={index}
+            {...dest}
+            onClick={() => handleClick(dest)}
+          />
         ))}
       </div>
     </div>
