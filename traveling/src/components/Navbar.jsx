@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  function onClick() {
+    alert("Bilal clicked at the button ");
+    console.log("button clicked");
+  }
   const navItems = ["Home", "About", "Services", "Contact", "Blog"];
 
   return (
@@ -34,8 +37,9 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <Button text="Sign-Up" />
-          <Button text="Sign-In" />
+          <Button text="Sign-Up" onClick={onClick} />
+
+          <Button text="Sign-In" onClick={onClick} />
         </div>
 
         {/* Mobile Menu Button */}
