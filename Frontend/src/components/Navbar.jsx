@@ -57,7 +57,7 @@ const Navbar = () => {
             <li key={item.name} className="relative group">
               {item.submenu ? (
                 <>
-                  <button className="flex items-center gap-1 font-bold cursor-pointer text-surface hover:text-accent transition dark:text-light">
+                  <button className="flex items-center gap-1 font-bold cursor-pointer text-surface hover:text-light hover:bg-primary transition dark:bg-surface dark:text-surface">
                     {item.name}
                     <span className="transition duration-300 group-hover:hidden">
                       <FiChevronDown />
@@ -68,12 +68,12 @@ const Navbar = () => {
                   </button>
 
                   {/* Dropdown menu */}
-                  <ul className="absolute top-full mt-3 font-semibold bg-white dark:bg-surface shadow-md rounded opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 min-w-[10rem]">
+                  <ul className="absolute top-full mt-3 font-semibold bg-surface dark:bg-surface shadow-md rounded opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 min-w-[10rem]">
                     {item.submenu.map((sub) => (
                       <li key={sub.name}>
                         <Link
                           to={sub.path}
-                          className="block px-4 py-2 text-surface hover:text-primary hover:bg-gray-100 dark:text-light dark:hover:bg-secondary dark:hover:text-white whitespace-nowrap transition"
+                          className="block px-4 py-2 text-surface hover:text-primary dark:text-light dark:hover:bg-secondary whitespace-nowrap transition"
                         >
                           {sub.name}
                         </Link>
