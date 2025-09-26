@@ -3,7 +3,7 @@ import { FiChevronDown, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
 import Button from "../Models/Button";
 import { Link } from "react-router-dom";
-import SignUp from "../Forms/SignUp";
+// import SignUp from "../Forms/SignUp";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -96,7 +96,10 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <Button text="Sign-Up" onClick={toggleSignUp} />
+          <Button
+            text="Sign-Up"
+            // onClick={toggleSignUp}
+          />
           <Button text="Sign-In" />
         </div>
 
@@ -132,10 +135,10 @@ const Navbar = () => {
               {/* On mobile dropdown, open SignUp modal on button click */}
               <Button
                 text="Sign-Up"
-                onClick={() => {
-                  setShowSignUp(true);
-                  setMenuOpen(false); // close mobile menu
-                }}
+                // onClick={() => {
+                //   setShowSignUp(true);
+                //   setMenuOpen(false); // close mobile menu
+                // }}
               />
             </li>
             <li>
