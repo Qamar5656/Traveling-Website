@@ -39,9 +39,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition-colors duration-300 bg-surface shadow`}
+      className={`fixed w-full top-0 z-50 transition-colors duration-300 bg-surface shadow py-6`}
     >
-      <div className="container mx-auto flex justify-between items-center p-6">
+      <div className="container mx-auto flex justify-between items-center ">
         {/* Logo */}
         <Link
           className="text-2xl font-bold text-primary cursor-pointer"
